@@ -19,12 +19,12 @@ Create secrets called
 https://github.com/ServiceNow/sncicd_githubworkflow
 
 ## Step 4: Configure the GitHub Action if need to adapt for your needs or workflows
-```yaml
-- name: ServiceNow CI/CD Instance Scan
+ ```yaml
+  - name: ServiceNow CI/CD Instance Scan
     uses: ./.github/actions/scan
     id: scan
     with:
-        scantype: full # point, suite_combo, suite_scoped, suite_update
+      scantype: full # point, suite_combo, suite_scoped, suite_update
         targetTable: <target_table>
         targetSysId: <target_sys_id>
         comboSysId: <combo_sys_id>
@@ -35,26 +35,28 @@ https://github.com/ServiceNow/sncicd_githubworkflow
         nowUsername: ${{ secrets.NOW_USERNAME }}
         nowPassword: ${{ secrets.NOW_PASSWORD }}
         nowScanInstance: ${{ secrets.NOW_SCAN_INSTANCE }}
-```
+  ```
 
-  targetTable:
-    description: "URL param if point scan type is specified."
-    required: false
-  targetSysId:
-    description: "URL param if point scan type is specified."
-    required: false
-  comboSysId:
-    description: ""
-    required: false
-  suiteSysId:
-    description: "URL param if suite_scoped or suite_update scan type is specified."
-    required: false
-  appScopeSysIds:
-    description: "Payload params, comma separated(if suite_scoped or suite_update scan type is specified)."
-    required: false
-  updateSetSysIds:
-    description: "Payload params, comma separated(if suite_scoped or suite_update scan type is specified)."
-    required: false
+- targetTable:
+  - description: "URL param if point scan type is specified."
+  - required: false
+- targetSysId:
+  - description: "URL param if point scan type is specified."
+  - required: false
+- comboSysId:
+  - description: ""
+  - required: false
+- suiteSysId:
+  - description: "URL param if suite_scoped or suite_update scan type is specified."
+  - required: false
+- appScopeSysIds:
+  - description: "Payload params, comma separated(if suite_scoped or suite_update scan type is specified)."
+  - required: false
+- updateSetSysIds:
+  - description: "Payload params, comma separated(if suite_scoped or suite_update scan type is specified)."
+  - required: false
+
+---
 
 - **scantype** - Type of scan process. Can be equal to full, point, suite_combo, suite_scoped, suite_update(Required).
 - **targetTable** - URL param, required if point scan type is specified.
