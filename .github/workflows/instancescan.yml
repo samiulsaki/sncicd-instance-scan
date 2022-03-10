@@ -1,45 +1,32 @@
 # This is a basic workflow that is manually triggered
-
 name: Instance Scan
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
-  workflow_dispatch:
-    # Inputs the workflow accepts.
+  workflow_dispatch:    
     inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
+      name:        
+        description: 'Testing the Instance scan'        
+        default: 'Scan'        
         required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs:  
+  scan:
+    name: Scanning Instances    
+    runs-on: ubuntu-latest    
     steps:
-    # Runs a single command using the runners shell
-#     - name: Send greeting
-#       run: echo "Hello ${{ github.event.inputs.name }}"
-      
-    - name: ServiceNow CI/CD Instance Scan
-      uses: ./.github/actions/scan
-      id: scan
-      with:
-        scantype: full # point, suite_combo, suite_scoped, suite_update
-#         targetTable: <target_table>
-#         targetSysId: <target_sys_id>
-#         comboSysId: <combo_sys_id>
-#         suiteSysId: <suite_sys_id>
-#         appScopeSysIds: <app_scope_sys_ids_comma_separated>
-#         updateSetSysIds: <update_set_sys_ids_comma_separated>
+      - uses: actions/checkout@v1
+      - name: ServiceNow CI/CD Instance Scan
+        uses: ./.github/actions/scan
+        id: scan
+        with:
+          scantype: full # point, suite_combo, suite_scoped, suite_update
+          # targetTable: <target_table>
+          # targetSysId: <target_sys_id>
+          # comboSysId: <combo_sys_id>
+          # suiteSysId: <suite_sys_id>
+          # appScopeSysIds: <app_scope_sys_ids_comma_separated>
+          # updateSetSysIds: <update_set_sys_ids_comma_separated>
       env:
         nowUsername: ${{ secrets.NOW_USERNAME }}
         nowPassword: ${{ secrets.NOW_PASSWORD }}
