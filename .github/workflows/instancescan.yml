@@ -1,5 +1,5 @@
 # This is a basic workflow that is manually triggered
-name: Instance Scan
+name: Instance Scan `date`
 
 on:
   workflow_dispatch:    
