@@ -21,7 +21,7 @@ jobs:
         id: scan
         with:
           scantype: point  # full, point, suite_combo, suite_scoped, suite_update
-          targetTable: d9adda22a5300110c0a0e1db2cdc95f2 
+          targetTable: Role 
           targetSysId: 4b8b46338742101001c8de05b7cb0be6 # Table Check - Increased number of unsuccessful password reset attempts
           # comboSysId: <combo_sys_id>          
           # suiteSysId: <suite_sys_id>
