@@ -1,5 +1,5 @@
 # This is a basic workflow that is manually triggered
-name: Instance Scan with Suites
+name: Instance Scan with Suites (Update Set)
 
 on:
   workflow_dispatch:    
@@ -25,7 +25,7 @@ jobs:
           # targetSysId: <target_sys_id>
           # comboSysId: <combo_sys_id>
           suiteSysId: e336165f87c60510d941a9f83cbb3517
-          # appScopeSysIds: global
+          # appScopeSysIds: <app_scope_sys_ids_comma_separated>
           updateSetSysIds: 0c820e5587c64110d941a9f83cbb35ff,1ef0391987864110d941a9f83cbb355d,423f00c187460110d941a9f83cbb3590,4831eaa2a5740110c0a0e1db2cdc955b,9055061987c64110d941a9f83cbb3508,968d004187460110d941a9f83cbb35d9,ab7d481187424110d941a9f83cbb3597,aaf7ee9b870a0510d941a9f83cbb350e,c2f55259870a4110d941a9f83cbb353c,e822865587c64110d941a9f83cbb35f8,4192c4cb8706c110d941a9f83cbb35ed
         env:
           nowUsername: ${{ secrets.NOW_USERNAME }}
