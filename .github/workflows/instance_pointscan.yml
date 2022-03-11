@@ -5,8 +5,8 @@ on:
   workflow_dispatch:    
     inputs:
       name:        
-        description: 'Testing the Instance scan'        
-        default: 'Scan'        
+        description: 'Testing the Instance point scan'        
+        default: 'Scan Point'
         required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
