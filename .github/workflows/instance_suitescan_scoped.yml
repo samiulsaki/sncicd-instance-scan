@@ -26,7 +26,7 @@ jobs:
           # comboSysId: <combo_sys_id>
           suiteSysId: e336165f87c60510d941a9f83cbb3517                    
           appScopeSysIds: global
-          updateSetSysIds: <update_set_sys_ids_comma_separated>          
+          # updateSetSysIds: <update_set_sys_ids_comma_separated>          
         env:
           nowUsername: ${{ secrets.NOW_USERNAME }}
           nowPassword: ${{ secrets.NOW_PASSWORD }}
