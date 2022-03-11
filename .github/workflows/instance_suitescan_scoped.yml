@@ -25,7 +25,7 @@ jobs:
           # targetSysId: <target_sys_id>
           # comboSysId: <combo_sys_id>
           suiteSysId: e336165f87c60510d941a9f83cbb3517                    
-          appScopeSysIds: global
+          appScopeSysIds: 5a3e9e13530120105408ddeeff7b12b1,56f0391987864110d941a9f83cbb355b,global,f9a0de22c7022010d447c17cf4c260ea,e78853e9c3222010b83971e54440dd26,3d3c2505c3e22010b83971e54440dd75,a7caf0e3731020104cb09434c4f6a741,e046257545b47c84712b8779a9abd0cb
           # updateSetSysIds: <update_set_sys_ids_comma_separated>          
         env:
           nowUsername: ${{ secrets.NOW_USERNAME }}

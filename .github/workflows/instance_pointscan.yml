@@ -21,8 +21,8 @@ jobs:
         id: scan
         with:
           scantype: point  # full, point, suite_combo, suite_scoped, suite_update
-          # targetTable: <target_table>
-          # targetSysId: <target_sys_id>
+          targetTable: 289d1622a5300110c0a0e1db2cdc9566 # sys_properties extends to sys_metadata
+          targetSysId: c0b684d48713001001c8de05b7cb0b51 # Table Check - Increased number of unsuccessful password reset attempts
           # comboSysId: <combo_sys_id>          
           # suiteSysId: <suite_sys_id>
           # appScopeSysIds: <app_scope_sys_ids_comma_separated>
