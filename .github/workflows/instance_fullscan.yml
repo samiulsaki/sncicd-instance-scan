@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: ServiceNow CI/CD Instance Scan
-        uses: ./actions.yaml
+        uses: ./actions.yml
         id: scan
         with:
           scantype: full # full, point, suite_combo, suite_scoped, suite_update
