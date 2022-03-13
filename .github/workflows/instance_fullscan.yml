@@ -15,9 +15,9 @@ jobs:
     name: Scanning Instances    
     runs-on: ubuntu-latest    
     steps:
-      - uses: actions/checkout@v1
+#       - uses: actions/checkout@v1
       - name: ServiceNow CI/CD Instance Scan
-        uses: ./
+        uses: ./actions.yaml
         id: scan
         with:
           scantype: full # full, point, suite_combo, suite_scoped, suite_update
